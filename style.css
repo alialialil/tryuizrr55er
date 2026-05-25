@@ -203,7 +203,7 @@ header.navbar.scrolled .nav-container {
     color: var(--secondary);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .logo span {
@@ -359,7 +359,7 @@ footer {
     animation: pulse-glow-whatsapp 2s infinite;
 }
 .whatsapp-float::before {
-    content: 'تواصل عبر الواتساب';
+    content: 'ØªÙˆØ§ØµÙ„ Ø¹Ø¨Ø± Ø§Ù„ÙˆØ§ØªØ³Ø§Ø¨';
     position: absolute;
     right: 100%;
     margin-right: 15px;
@@ -425,58 +425,72 @@ footer {
 .wa-demo-content p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; }
 
 .wa-mockup-wrapper {
-    flex: 1;
-    max-width: 450px;
+    flex: 0 0 auto;
+    width: 320px;
     margin: 0 auto;
     background: #e5ddd5;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25), inset 0 0 0 2px #333;
     overflow: hidden;
     position: relative;
-    border: 8px solid #fff;
+    border: 10px solid #1a1a1a;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 570px;
     direction: rtl;
+}
+.wa-mockup-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background: #1a1a1a;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    z-index: 15;
 }
 .wa-header {
     background: #075E54;
     color: white;
-    padding: 15px;
+    padding: 24px 10px 8px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .wa-avatar {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     background: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #075E54;
+    flex-shrink: 0;
 }
-.wa-info h4 { margin: 0; font-size: 1.1rem; color: #fff; font-weight: bold; }
-.wa-info p { margin: 0; font-size: 0.85rem; color: rgba(255,255,255,0.8); }
+.wa-info h4 { margin: 0; font-size: 0.85rem; color: #fff; font-weight: bold; line-height: 1.2; }
+.wa-info p { margin: 0; font-size: 0.65rem; color: rgba(255,255,255,0.8); margin-top: 1px; }
 
 .wa-body {
-    padding: 20px;
+    padding: 15px;
     flex: 1;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0h100v100H0V0z" fill="%23e5ddd5"/><circle cx="50" cy="50" r="2" fill="%23d1c8c1"/></svg>');
 }
 
 .wa-msg {
     max-width: 85%;
-    padding: 12px 16px;
-    border-radius: 12px;
-    font-size: 1rem;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.85rem;
     line-height: 1.5;
     position: relative;
     opacity: 0;
@@ -555,3 +569,8 @@ footer {
     .wa-demo-container { flex-direction: column; text-align: center; }
     .wa-mockup-wrapper { width: 100%; height: 500px; }
 }
+
+
+
+
+
